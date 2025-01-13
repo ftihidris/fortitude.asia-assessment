@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="container">
+    <div class="header-left">
+      <a href="#" class="logo">
+        <img src="assets/logo.svg" alt="Logo">
+      </a>
+    </div>
+
+    <div class="header-right">
+      <a class="active" href="#development&design">Development & Integration</a>
+      <a href="#ui&ux">UI & UX Design</a>
+      <a href="#contact">Contact</a>
+    </div> 
+       
+    <div class="hamburger-menu" (click)="toggleSidebar()">
+      <i class="material-icons">menu</i>
+    </div>
+  </div>
+</div>
+
+<div class="sidebar" [class.open]="isSidebarVisible" (click)="$event.stopPropagation()">
+  <a href="#development&design">Development & Integration</a>
+  <a href="#ui&ux">UI & UX Design</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="overlay" *ngIf="isSidebarVisible" (click)="closeSidebar()"></div>

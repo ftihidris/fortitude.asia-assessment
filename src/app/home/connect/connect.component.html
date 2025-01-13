@@ -1,0 +1,58 @@
+<div class="content">
+  <div class="container">
+    <h1>Connect</h1>
+    <p class="h2">
+      Every successful connection starts in conversation. Drop us a line today :)
+    </p>
+
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate autocomplete="on">
+      <div class="parent">
+
+        <div class="div1">
+          <div class="input-group">
+            <input type="text" required id="name" name="name" ngModel autocomplete="name" aria-describedby="nameHelp">
+            <label for="name">Name</label>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="input-group">
+            <input type="email" required id="email" name="email" ngModel autocomplete="email"
+              aria-describedby="emailHelp">
+            <label for="email">Email address</label>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="input-group">
+            <input type="tel" required id="tel" name="tel" ngModel autocomplete="tel"
+              aria-describedby="contactHelp">
+            <label for="tel">Contact no.</label>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="textarea-group">
+            <textarea id="message" required name="message" rows="4" ngModel autocomplete="off"
+              aria-describedby="messageHelp"></textarea>
+            <label for="message">How can we help?</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn">
+
+        <!-- iv. Reset form to its original state upon clicking the "Clear" button. -->
+        <button type="button" (click)="clearForm(contactForm)" [disabled]="!contactForm.dirty"
+          [ngClass]="{ 'disabled': !contactForm.dirty }">
+          Clear
+        </button>
+
+        <!-- iii. All form fields must be filled in before enabling the "Connect with us" button. Additional validations are encouraged to further demonstrate your experience. -->
+        <button type="submit" [disabled]="!contactForm.valid" [style.opacity]="contactForm.valid ? '100%' : '50%'">
+          Connect with Us
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

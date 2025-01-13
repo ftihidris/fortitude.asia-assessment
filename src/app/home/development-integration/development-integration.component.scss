@@ -1,0 +1,120 @@
+.content {
+    padding-block: 110px 60px;
+    background-color: #F0F0F0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.h2 {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.card-list {
+    margin-top: 40px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 30px;
+    justify-items: center;
+    align-items: stretch;
+    padding: 0 30px;
+}
+
+.col {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid #dee2e6;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    min-height: 100%;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+// i. Following the design, apply a hover effect to cards with a quick transition.
+.card:hover { 
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.card-img {
+    height: 90px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+}
+
+.card-body {
+    text-align: left;
+    flex-direction: column;
+    display: flex;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666666;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.description {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 30px;
+    }
+    .content {
+        padding-block: 90px 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 20px 30px;
+    }
+}

@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="container">
+    <h1>Development & Integration</h1>
+    <p class="h2">
+      Our development and integration services cater to organisations looking at digital transformation and Industry 4.0.
+      <br>Let’s work together to realise your business goals today.
+    </p>
+    
+    <div class="card-list">
+      <div class="row">
+        <div class="col" *ngFor="let card of cardDevList">
+          <article class="card">
+            <img class="card-img" [src]="card.img" alt="{{ card.label }} image" loading="lazy" role="img" />
+            <div class="card-body">
+              <span class="label">{{ card.label }}</span>
+              <h3 class="header">{{ card.header }}</h3>
+              <p class="description">{{ card.description }}</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
