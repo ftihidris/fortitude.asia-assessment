@@ -11,6 +11,7 @@ import { ConnectComponent } from './home/connect/connect.component';
 import { CardService } from './home/service/card.service';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,13 @@ import { FormsModule } from '@angular/forms';
     DevelopmentIntegrationComponent,
     UiUxComponent,
     ConnectComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
     
   ],
   
